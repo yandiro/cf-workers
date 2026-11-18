@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
+  runtimeConfig: {
+    // Override in prod with NUXT_BACKEND_API_SECRET (wrangler secret put NUXT_BACKEND_API_SECRET)
+    backendApiSecret: 'dev-secret',
+  },
+
   nitro: {
     preset: "cloudflare_module",
 
