@@ -6,6 +6,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     // Override in prod with NUXT_BACKEND_API_SECRET (wrangler secret put NUXT_BACKEND_API_SECRET)
     backendApiSecret: 'dev-secret',
+    public: {
+      appEnv: '', // Reads from .env:NUXT_PUBLIC_APP_ENV
+    },
   },
 
   nitro: {
