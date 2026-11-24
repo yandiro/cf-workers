@@ -14,7 +14,19 @@
 	"observability": {
 		"enabled": true
 	},
-	"upload_source_maps": true
+	"upload_source_maps": true,
+	// Cloudflare for SaaS: custom hostnames (e.g. *.noq-servers.net via Route 53 CNAME
+	// -> fallback.noq-cf.win) all land on the noq-cf.win zone.
+	// Worker name + routes are set per environment in nuxt.config.ts (DEPLOY_ENV).
+	// Don't add "routes" here: Nitro merges arrays, so they'd be added to every env.
+	"workers_dev": true,
+	"kv_namespaces": [
+		{
+			"binding": "tenant_config_cache",
+			"id": "d1e22e926903445780edd2f255fded13",
+			"remote": true
+		}
+	]
 	/**
 	 * Smart Placement
 	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement

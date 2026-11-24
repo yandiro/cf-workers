@@ -3,6 +3,11 @@ import type { TenantConfig } from './tenants.mock'
 
 // Event is passed first so Nitro uses event.waitUntil() for SWR background
 // revalidation — required on Workers, otherwise the refresh may be killed.
+
+/*
+ * Cloudflare Workers KV cache called tenant_config_cache.
+ * See: nuxt.config.ts and wrangler.jsonc
+ */
 export const getTenantConfig = defineCachedFunction(
   async (event: H3Event, tenantKey: string) => {
     // Only executes on cache miss or background revalidation

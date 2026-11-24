@@ -13,6 +13,12 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: "cloudflare_module",
+    storage: {
+      cache: {
+        driver: 'cloudflare-kv-binding',
+        binding: 'tenant_config_cache'
+      }
+    },
 
     cloudflare: {
       deployConfig: true,
