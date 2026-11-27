@@ -50,15 +50,15 @@ export const TENANTS: Record<string, Omit<TenantConfig, 'origin'>> = {
   // Using noq-servers.net domain
   // I chose to use <franchise>.cf.noq-servers.net but the "cf." is not needed
   // AWS Route 53 CNAME record poinst to "fallback.noq-cf.win", which is managed in CloudFlare
-  'dev-tulio.cf.noq-servers.net': { id: 'dev-tulio1', name: 'Tulio`s Produce', theme: {
+  'tulio.dev.cf.noq-servers.net': { id: 'dev-tulio1', name: 'Tulio`s Produce', theme: {
     primary: '#8b5cf6', secondary: '#64748b', bg: '#ffffff', text: '#111827',
     fontFamily: "'Inter', sans-serif", fontUrl: INTER, radius: '8px',
   } },
-  'dev-tulio2.cf.noq-servers.net': { id: 'dev-tulio2', name: 'Tulio`s Cuts', theme: {
+  'tulio2.dev.cf.noq-servers.net': { id: 'dev-tulio2', name: 'Tulio`s Cuts', theme: {
     primary: '#f6b85c', secondary: '#7c2d12', bg: '#fffbeb', text: '#451a03',
     fontFamily: "'Playfair Display', serif", fontUrl: 'https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap', radius: '0px',
   } },
-  'dev-tulio3.cf.noq-servers.net': { id: 'dev-tulio3', name: 'Tulio`s Fishmonger', theme: {
+  'tulio3.dev.cf.noq-servers.net': { id: 'dev-tulio3', name: 'Tulio`s Fishmonger', theme: {
     primary: '#5cf685', secondary: '#64748b', bg: '#ecfeff', text: '#111827',
     fontFamily: "'Inter', sans-serif", fontUrl: INTER, radius: '16px',
   } },
