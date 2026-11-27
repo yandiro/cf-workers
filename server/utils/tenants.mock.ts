@@ -65,8 +65,9 @@ export const TENANTS: Record<string, Omit<TenantConfig, 'origin'>> = {
 
   // Tenant-owned domains
   // AWS Route 53 CNAME record points to "fallback.noq-cf.win", which is managed in CloudFlare
-  'orderonline.freshgroceronline.com': { id: 'fg_online', name: 'Fresh Grocer Online', theme: {
-    primary: '#ef4444', secondary: '#166534', bg: '#ffffff', text: '#111827',
-    fontFamily: "'Roboto', sans-serif", fontUrl: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap', radius: '8px',
-  } },
+  // Removed from the dev branch, for testing purposes
+  // 'orderonline.freshgroceronline.com': { id: 'fg_online', name: 'Fresh Grocer Online', theme: {
+  //   primary: '#ef4444', secondary: '#166534', bg: '#ffffff', text: '#111827',
+  //   fontFamily: "'Roboto', sans-serif", fontUrl: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap', radius: '8px',
+  // } },
 }
